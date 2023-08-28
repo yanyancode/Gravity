@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Gravity</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @font-face {
+            font-family: myOpenSans;
+            src: url(opensans.ttf);
+        }
+
+        @font-face {
+            font-family: myNotoColorEmoji;
+            src: url(notoColorEmoji.ttf);
+        }
+
+        * {
+            font-family: myOpenSans, myNotoColorEmoji;
+            user-select: none;
+        }
+
+        body {
+            overflow: hidden;
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            left: 0;
+            top: 0;
+        }
+
+        body>div {
+            padding: 25px;
+        }
+
+        canvas {
+            z-index: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #price {
+            background-color: #ffffffef;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 0;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            position: absolute;
+            left: 50vw;
+            top: 50vh;
+        }
+    </style>
+    <script src='script.js'></script>
+</head>
+
+<body>
+    <div id='explanation'>
+        <div style='font-size: 20px;'>
+            Objective:<br>
+            Collect prizes at the bottom 🎀<br><br>
+            Instructions:<br>
+            Accelerate/move the ball with the horizontal arrow keys before release ↔️<br>
+            Press the down arrow to release ⏬<br><br>
+            Rules:<br>
+            Falling off the arena 👇 means a restart 🔁<br>
+            At start/restart you must move horizontally before release 🏃‍♂️<br><br>
+            Tips:<br>
+            There is no randomness 🎲, only wrong calculations of the processing unit 😂<br> <br>
+            Good luck!<br>Press space key to continue!
+        </div>
+    </div>
+    <div id='price' style='display: none;'>
+        <div style='font-size: 25px;'>
+            Congratulations!<br>
+        </div>
+        <div style='font-size: 20px;' id='won'>
+        </div>
+    </div>
+</body>
+
+</html>
